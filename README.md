@@ -1,6 +1,6 @@
 # Devbootcamp::Core
 
-TODO: Write a gem description
+the core of devbootcamp
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+TBD
 
 ## Contributing
 

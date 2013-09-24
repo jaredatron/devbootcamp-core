@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Devbootcamp::Core::VERSION
   spec.authors       = ["Jared Grippe"]
   spec.email         = ["jared@deadlyicon.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{the core of devbootcamp}
+  spec.summary       = %q{the core of devbootcamp}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -18,6 +18,12 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "bundler", "~> 1.3"
+
+  spec.add_dependency "activesupport", "~> 4.0"
+  spec.add_dependency "activerecord",  "~> 4.0"
+
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
 end
