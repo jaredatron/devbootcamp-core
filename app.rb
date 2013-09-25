@@ -4,23 +4,14 @@ ENV['RACK_ENV'] ||= 'development'
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __FILE__)
 
 require 'bundler/setup'
-$:.unshift File.expand_path('../app', __FILE__)
 
 Bundler.require :default, ENV['RACK_ENV']
 
 require "xmlrpc/server"
 require "xmlrpc/rack"
-require 'devbootcamp'
+require File.expand_path('../devbootcamp', __FILE__)
 
 module App
-
-  def self.root
-    @root ||= Pathname.new File.expand_path('../..', __FILE__)
-  end
-
-  def self.env
-    @env ||= ActiveSupport::StringInquirer.new(ENV['RACK_ENV'])
-  end
 
   def self.call env
     xmlrpc_rack.call(env)
